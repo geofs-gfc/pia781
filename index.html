@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .green-strip {
+            background: linear-gradient(90deg, rgba(0,86,36,1) 0%, rgba(192,162,68,1) 100%);
+            padding: 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 8px;
+            margin: 20px;
+        }
+
+        .green-strip h2, .green-strip p {
+            margin: 0;
+            color: white;
+        }
+
+        .green-strip .search-again {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-again button {
+            padding: 10px 20px;
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-again button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .search-again button img {
+            margin-right: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .breadcrumb div {
+            display: flex;
+            align-items: center;
+        }
+
+        .breadcrumb span {
+            display: block;
+            width: 100px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .calendar-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .calendar-section .day {
+            text-align: center;
+            width: 80px;
+            padding: 10px;
+        }
+
+        .calendar-section .day.selected {
+            background-color: #c0a244;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .flight-card {
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+        }
+
+        .flight-card div {
+            width: 20%;
+            text-align: center;
+        }
+
+        .flight-card .price {
+            color: green;
+            font-size: 18px;
+        }
+
+        .flight-card button {
+            padding: 10px 20px;
+            background-color: #005624;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="breadcrumb">
+            <div>
+                <span>1. Flight Selection</span>
+                <span>2. Passenger</span>
+                <span>3. Additional Services</span>
+                <span>4. Payment</span>
+                <span>5. Confirmation</span>
+            </div>
+        </div>
+
+    <div class="green-strip">
+        <div class="search-again">
+            <button>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/2048px-Search_Icon.svg.png" alt="search-icon" width="16">
+                Search Again
+            </button>
+        </div>
+        <div>
+            <h2>Karachi (KHI) - Toronto (YYZ)</h2>
+            <p>Sat, Nov 09 | 1 Adult, 0 Child, 0 Infant | One Way</p>
+        </div>
+        <div>
+            <h2>Total Price: <b>256,480.00 PKR</b></h2>
+        </div>
+    </div>
+
+        <div class="calendar-section">
+<button>Previous Week</button>
+            <div class="day">6 Wednesday</div>
+            <div class="day">7 Thursday</div>
+            <div class="day">8 Friday</div>
+            <div class="day selected">9 Saturday</div>
+            <div class="day">10 Sunday</div>
+            <div class="day">11 Monday</div>
+            <div class="day">12 Tuesday</div>
+            <button>Next Week</button>
+        </div>
+
+        <h3>Number of Flights 3 | Sort: Lowest Price</h3>
+
+        <div class="flight-card">
+            <div>
+                <h3>12:55 AM</h3>
+                <p>Karachi (KHI)</p>
+                <p>09 Nov 2024</p>
+            </div>
+            <div>
+                <p>20h 50m</p>
+                <p>Via: ISB - Islamabad International Airport</p>
+                <p>PK-300 - PK-781</p>
+            </div>
+            <div>
+                <h3>12:45 PM</h3>
+                <p>Toronto (YYZ)</p>
+                <p>09 Nov 2024</p>
+            </div>
+            <div>
+                <p class="price">From 256,480.00 PKR</p>
+                <p>Baggage: 2</p>
+            </div>
+            <div>
+                <button onclick="window.location.href='https://forms.gle/d18byKM8E8x836zA7';">Book Now</button>
+            </div>
+        </div>
+
+        <div class="flight-card">
+            <div>
+                <h3>12:20 AM</h3>
+                <p>Karachi (KHI)</p>
+                <p>09 Oct 2024</p>
+            </div>
+            <div>
+                <p>25h 05m</p>
+                <p>Via: JED - Jeddah International Airport</p>
+                <p>PK-761 - SV-61</p>
+            </div>
+            <div>
+                <h3>04:25 PM</h3>
+                <p>Toronto (YYZ)</p>
+                <p>10 Oct 2024 +1 Day</p>
+            </div>
+            <div>
+                <p class="price">From 300,170.00 PKR</p>
+                <p>Baggage: 2</p>
+            </div>
+            <div>
+                <button>Book Now</button>
+            </div>
+        </div>
+
+        <div class="flight-card">
+            <div>
+                <h3>01:00 PM</h3>
+                <p>Karachi (KHI)</p>
+                <p>09 Oct 2024</p>
+            </div>
+            <div>
+                <p>29h</p>
+                <p>Via: LHE - Allama Iqbal International Airport</p>
+                <p>PK-300 - PK-789</p>
+            </div>
+            <div>
+                <h3>09:00 AM</h3>
+                <p>Toronto (YYZ)</p>
+                <p>10 Oct 2024 +1 Day</p>
+            </div>
+            <div>
+                <p class="price">From 314,670.00 PKR</p>
+                <p>Baggage: 2</p>
+            </div>
+            <div>
+                <button>Book Now</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
